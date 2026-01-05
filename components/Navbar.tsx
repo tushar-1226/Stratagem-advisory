@@ -129,14 +129,6 @@ export default function Navbar() {
               </AnimatePresence>
             </motion.div>
             <div>
-              <Link
-                href="/carrers"
-                className="hover:text-primary px-3 py-2 ease-in-out"
-              >
-                Carrers
-              </Link>
-            </div>
-            <div>
               <Link href="/contact-us">
                 <Button text="Contact us" />
               </Link>
@@ -259,15 +251,6 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </motion.div>
-              <div>
-                <Link
-                  href="/carrers"
-                  className="hover:bg-primary hover:text-white hover:rounded-lg block px-3 py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Carrers
-                </Link>
-              </div>
               <div className="border-t border-gray-200 pt-5 mx-3">
                 <Link
                   href="/contact-us"

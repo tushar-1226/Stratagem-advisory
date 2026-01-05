@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Button from "../ui/Button";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 export default function HeroSection() {
   return (
@@ -18,19 +20,32 @@ export default function HeroSection() {
 
       <div className="absolute inset-0 bg-black/70"></div>
 
-      <div className="relative z-10 flex flex-col items-start justify-end h-full text-left max-w-3xl">
-        <p className="text-2xl font-bold lg:text-4xl text-white/90 mb-3">
+      <motion.div
+        className="relative z-10 flex flex-col items-start justify-end h-full text-left max-w-3xl"
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p
+          className="text-2xl font-bold lg:text-4xl text-white/90 mb-3"
+          variants={staggerItem}
+        >
           Leading strategic consulting services to help your business grow and
           succeed in today's competitive market.
-        </p>
-        <p className="lg:text-lg text-white/80 mb-2">
+        </motion.p>
+        <motion.p
+          className="lg:text-lg text-white/80 mb-2"
+          variants={staggerItem}
+        >
           We provide expert guidance and innovative solutions tailored to your
           unique business needs.
-        </p>
-        <Link href="/contact-us">
-          <Button text="Contact us" />
-        </Link>
-      </div>
+        </motion.p>
+        <motion.div variants={staggerItem}>
+          <Link href="/contact-us">
+            <Button text="Contact us" />
+          </Link>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
