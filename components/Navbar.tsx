@@ -235,7 +235,7 @@ export default function Navbar() {
                       exit="hidden"
                     >
                       <div className="pl-6 space-y-1">
-                        {servicesSubMenu.map((subItem) => (
+                        {servicesSubMenu.map((subItem, index) => (
                           <motion.div
                             key={subItem.href}
                             variants={subtleStaggerItem}
