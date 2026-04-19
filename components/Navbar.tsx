@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Bars3Icon,
@@ -56,14 +57,25 @@ export default function Navbar() {
       variants={subtleFadeInDown}
     >
       <div className="max-w-7xl mx-auto px-6 py-2">
-        <div className="flex justify-between gap-20 items-center h-16">
+        <div className="flex justify-between gap-4 lg:gap-20 items-center h-16">
           <motion.div className="shrink-0" variants={subtleFadeIn}>
-            <Link href="/" className="text-2xl font-bold text-primary">
-              Strategem Advisor
+            <Link
+              href="/"
+              className="inline-flex items-center"
+              aria-label="Stratagem Advisory home"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Stratagem Advisory"
+                width={967}
+                height={228}
+                priority
+                className="h-auto w-[180px] sm:w-[220px] lg:w-[280px]"
+              />
             </Link>
           </motion.div>
           <div className="hidden lg:flex lg:space-x-3 items-center">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <motion.div key={link.href} variants={subtleFadeIn}>
                 <Link
                   href={link.href}
@@ -186,7 +198,7 @@ export default function Navbar() {
               initial="hidden"
               animate="visible"
             >
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <motion.div key={link.href} variants={subtleStaggerItem}>
                   <Link
                     href={link.href}
@@ -223,7 +235,7 @@ export default function Navbar() {
                       exit="hidden"
                     >
                       <div className="pl-6 space-y-1">
-                        {servicesSubMenu.map((subItem, index) => (
+                        {servicesSubMenu.map((subItem) => (
                           <motion.div
                             key={subItem.href}
                             variants={subtleStaggerItem}

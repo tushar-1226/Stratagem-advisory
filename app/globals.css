@@ -30,19 +30,6 @@ body {
   /* font-family: "Concert One", sans-serif; */
 }
 
-@keyframes scroll-logos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll-logos {
-  animation: scroll-logos 30s linear infinite;
-}
-
 @keyframes scroll-testimonials {
   0% {
     transform: translateX(0);
