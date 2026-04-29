@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { motion, PanInfo } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
@@ -9,7 +9,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 export interface ResearchItem {
   id: string;
   title: string;
-  image: string;
+  image: string | StaticImageData;
   href: string;
 }
 
