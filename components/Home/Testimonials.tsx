@@ -14,7 +14,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     review:
-      "Stratagem Advisory provided exceptional strategic guidance that transformed our business approach. Their insights were invaluable in helping us navigate complex market challenges.",
+      "Strategem Advisory provided exceptional strategic guidance that transformed our business approach. Their insights were invaluable in helping us navigate complex market challenges.",
     clientName: "John Smith",
     clientPosition: "CEO",
     clientCompany: "Tech Innovations Inc.",
@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     review:
-      "Working with Stratagem Advisory was a game-changer for our organization. Their strategic recommendations helped us achieve significant growth and improve our competitive edge.",
+      "Working with Strategem Advisory was a game-changer for our organization. Their strategic recommendations helped us achieve significant growth and improve our competitive edge.",
     clientName: "Michael Chen",
     clientPosition: "VP of Strategy",
     clientCompany: "Enterprise Dynamics",
@@ -46,7 +46,7 @@ const testimonials: Testimonial[] = [
   {
     id: 5,
     review:
-      "Stratagem Advisory's comprehensive approach to competitive intelligence gave us the clarity we needed to make informed strategic decisions. Highly recommended!",
+      "Strategem Advisory's comprehensive approach to competitive intelligence gave us the clarity we needed to make informed strategic decisions. Highly recommended!",
     clientName: "David Thompson",
     clientPosition: "Business Development Manager",
     clientCompany: "Strategic Ventures",

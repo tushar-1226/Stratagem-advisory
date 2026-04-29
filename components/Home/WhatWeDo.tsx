@@ -12,7 +12,7 @@ export default function WhatWeDo() {
             </h2>
             <div className="space-y-3 text-sm lg:text-base text-foreground/80">
               <p>
-                At Stratagem Advisory, we provide comprehensive strategic
+                At Strategem Advisory, we provide comprehensive strategic
                 consulting services designed to help businesses navigate complex
                 challenges and achieve sustainable growth. Our team of
                 experienced consultants brings deep industry expertise and
@@ -20,7 +20,7 @@ export default function WhatWeDo() {
               </p>
               <p>
                 We specialize in developing tailored solutions that align with
-                your business objectives, whether you're looking to optimize
+                your business objectives, whether you&apos;re looking to optimize
                 operations, expand into new markets, or transform your
                 organizational structure. Our approach combines rigorous
                 analysis with practical implementation strategies.

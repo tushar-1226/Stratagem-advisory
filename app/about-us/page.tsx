@@ -48,7 +48,7 @@ export default function AboutUs() {
           </h2>
           <div className="space-y-4 text-base lg:text-lg text-foreground/80 leading-relaxed">
             <p>
-              Strategem Advisor is a leading strategic consulting firm dedicated
+              Strategem Advisory is a leading strategic consulting firm dedicated
               to helping businesses navigate complex challenges and achieve
               sustainable growth. With years of industry experience and a team
               of expert consultants, we provide innovative solutions tailored to
@@ -61,10 +61,10 @@ export default function AboutUs() {
               practical business acumen to deliver results that matter.
             </p>
             <p>
-              At Strategem Advisor, we believe in building lasting partnerships
+              At Strategem Advisory, we believe in building lasting partnerships
               with our clients. We work closely with you to understand your
               challenges, identify opportunities, and implement strategies that
-              transform your business and position you for success in today's
+              transform your business and position you for success in today&apos;s
               competitive marketplace.
             </p>
           </div>

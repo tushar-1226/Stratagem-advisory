@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   EnvelopeIcon,
   PhoneIcon,
-  MapPinIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Footer() {
@@ -36,11 +35,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">
-              Strategem Advisor
+              Strategem Advisory
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
               Leading strategic consulting services to help your business grow
-              and succeed in today's competitive market.
+              and succeed in today&apos;s competitive market.
             </p>
           </div>
 
@@ -100,14 +99,6 @@ export default function Footer() {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPinIcon className="w-5 h-5 text-white/70 shrink-0 mt-0.5" />
-                <span className="text-white/70 text-sm">
-                  123 Business Street, Suite 100
-                  <br />
-                  City, State 12345
-                </span>
-              </li>
             </ul>
           </div>
         </div>
@@ -116,7 +107,7 @@ export default function Footer() {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm text-center md:text-left">
-              © {currentYear} Strategem Advisor. All rights reserved.
+              © {currentYear} Strategem Advisory. All rights reserved.
             </p>
             <div className="flex gap-6">
               {legalLinks.map((link) => (

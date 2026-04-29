@@ -62,11 +62,11 @@ export default function Navbar() {
             <Link
               href="/"
               className="inline-flex items-center"
-              aria-label="Stratagem Advisory home"
+              aria-label="Strategem Advisory home"
             >
               <Image
                 src="/images/logo.png"
-                alt="Stratagem Advisory"
+                alt="Strategem Advisory"
                 width={967}
                 height={228}
                 priority

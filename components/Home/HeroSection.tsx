@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
+import { staggerContainer, staggerItem } from "@/lib/animations";
 
 export default function HeroSection() {
   return (
@@ -31,7 +31,7 @@ export default function HeroSection() {
           variants={staggerItem}
         >
           Leading strategic consulting services to help your business grow and
-          succeed in today's competitive market.
+          succeed in today&apos;s competitive market.
         </motion.p>
         <motion.p
           className="lg:text-lg text-white/80 mb-2"

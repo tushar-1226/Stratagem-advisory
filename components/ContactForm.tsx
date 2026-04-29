@@ -2,21 +2,6 @@
 
 import { useState } from "react";
 
-// Google Form Configuration
-// Replace these with your actual Google Form action URL and entry IDs
-// To get these: Create a Google Form, inspect the form element, and get the action URL and entry IDs
-const GOOGLE_FORM_ACTION =
-  "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
-const ENTRY_IDS = {
-  firstName: "entry.XXXXXXX", // Replace with actual entry ID
-  lastName: "entry.XXXXXXX",
-  email: "entry.XXXXXXX",
-  country: "entry.XXXXXXX",
-  jobTitle: "entry.XXXXXXX",
-  companyName: "entry.XXXXXXX",
-  message: "entry.XXXXXXX",
-};
-
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -51,31 +36,28 @@ export default function ContactForm() {
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      // Create FormData for Google Forms submission
-      const formDataToSubmit = new FormData();
-      formDataToSubmit.append(ENTRY_IDS.firstName, formData.firstName);
-      formDataToSubmit.append(ENTRY_IDS.lastName, formData.lastName);
-      formDataToSubmit.append(ENTRY_IDS.email, formData.email);
-      formDataToSubmit.append(ENTRY_IDS.country, formData.country);
-      formDataToSubmit.append(ENTRY_IDS.jobTitle, formData.jobTitle);
-      formDataToSubmit.append(ENTRY_IDS.companyName, formData.companyName);
-      formDataToSubmit.append(ENTRY_IDS.message, formData.message);
-
-      // Submit to Google Forms
-      const response = await fetch(GOOGLE_FORM_ACTION, {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        mode: "no-cors", // Google Forms doesn't allow CORS, so we use no-cors
-        body: formDataToSubmit,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      // Since we're using no-cors, we can't check the response
-      // But if no error is thrown, we assume success
+      const result = (await response.json()) as {
+        success?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Unable to submit your message.");
+      }
+
       setSubmitStatus({
         type: "success",
-        message: "Thank you! Your message has been sent successfully.",
+        message: "Thank you. Your message has been received.",
       });
 
-      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
@@ -85,7 +67,7 @@ export default function ContactForm() {
         companyName: "",
         message: "",
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "Something went wrong. Please try again later.",
