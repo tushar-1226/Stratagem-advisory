@@ -12,37 +12,37 @@ import CI3 from "@/media/CI_3.jpeg";
 export const marketResearchItems: ResearchItem[] = [
   {
     id: "mr1",
-    title: "Research 1",
+    title: "Chemicals",
     image: MR1,
     href: "/service/market-research/research1",
   },
   {
     id: "mr2",
-    title: "Research 2",
+    title: "Semiconductors",
     image: MR2,
     href: "/service/market-research/research2",
   },
   {
     id: "mr3",
-    title: "Research 3",
+    title: "Fast Moving Consumer Goods (FMCG)",
     image: MR3,
     href: "/service/market-research/research3",
   },
   {
     id: "mr4",
-    title: "Research 4",
+    title: "Automotive",
     image: MR4,
     href: "/service/market-research/research4",
   },
   {
     id: "mr5",
-    title: "Research 5",
+    title: "Healthcare",
     image: MR5,
     href: "/service/market-research/research5",
   },
   {
     id: "mr6",
-    title: "Research 6",
+    title: "Information Technology Industry",
     image: MR6,
     href: "/service/market-research/research6",
   },
@@ -51,19 +51,19 @@ export const marketResearchItems: ResearchItem[] = [
 export const competitiveIntelligenceItems: ResearchItem[] = [
   {
     id: "ci1",
-    title: "Intelligence 1",
+    title: "Oncology",
     image: CI1,
     href: "/service/competitive-intelligence/intelligence1",
   },
   {
     id: "ci2",
-    title: "Intelligence 2",
+    title: "Rare diseases",
     image: CI2,
     href: "/service/competitive-intelligence/intelligence2",
   },
   {
     id: "ci3",
-    title: "Intelligence 3",
+    title: "Chronic disease",
     image: CI3,
     href: "/service/competitive-intelligence/intelligence3",
   },

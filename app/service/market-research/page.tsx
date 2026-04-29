@@ -31,9 +31,6 @@ export default function MarketResearchPage() {
     <main>
       <section className="bg-secondary text-white">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/70">
-            Service
-          </p>
           <h1 className="max-w-4xl text-4xl font-bold lg:text-6xl">
             Market Research
           </h1>
