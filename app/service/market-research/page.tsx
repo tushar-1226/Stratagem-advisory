@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Market Research",
+  description:
+    "Comprehensive market research services — market sizing, customer behavior analysis, demand forecasting, and growth opportunity identification from Strategem Advisory.",
+  openGraph: {
+    title: "Market Research | Strategem Advisory",
+    description:
+      "Data-driven market research built for real strategic decisions. Understand your market, customer demand, and growth opportunities.",
+    url: "https://www.stratagemadvisory.com/service/market-research",
+  },
+};
 
 const capabilities = [
   "Market sizing and opportunity assessment",

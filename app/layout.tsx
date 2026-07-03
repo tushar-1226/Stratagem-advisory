@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MailFloatingButton from "@/components/MailFloatingButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Strategem Advisory",
+  title: {
+    default: "Strategem Advisory",
+    template: "%s | Strategem Advisory",
+  },
   description:
-    "Strategem Advisory provides market research and competitive intelligence for strategic business decisions.",
+    "Strategem Advisory provides expert market research and competitive intelligence for strategic business decisions.",
+  metadataBase: new URL("https://www.stratagemadvisory.com"),
+  openGraph: {
+    siteName: "Strategem Advisory",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +43,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <MailFloatingButton />
       </body>
     </html>
   );

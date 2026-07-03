@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Competitive Intelligence",
+  description:
+    "Strategic competitive intelligence services — competitor profiling, market positioning analysis, SWOT, and actionable recommendations from Strategem Advisory.",
+  openGraph: {
+    title: "Competitive Intelligence | Strategem Advisory",
+    description:
+      "Understand your competitors and act with confidence. Decision-ready competitive intelligence for leadership teams.",
+    url: "https://www.stratagemadvisory.com/service/competitive-intelligence",
+  },
+};
 
 const focusAreas = [
   "Competitor profiling and strategic positioning",

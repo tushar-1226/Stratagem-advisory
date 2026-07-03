@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Strategem Advisory. Reach out for market research, competitive intelligence enquiries, or a custom consulting proposal.",
+  openGraph: {
+    title: "Contact Us | Strategem Advisory",
+    description:
+      "Talk to our team about your market research or competitive intelligence needs. We typically respond within 24 hours.",
+    url: "https://www.stratagemadvisory.com/contact-us",
+  },
+};
 
 export default function ContactUs() {
   return (

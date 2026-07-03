@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import WhatWeDo from "@/components/Home/WhatWeDo";
 import ServiceInfo from "@/components/Home/ServiceInfo";
+import TeamSection from "@/components/AboutUs/TeamSection";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about Strategem Advisory — our mission, values, and the expert team driving strategic insights for global businesses.",
+  openGraph: {
+    title: "About Us | Strategem Advisory",
+    description:
+      "Meet the team behind Strategem Advisory and learn what drives our commitment to strategic excellence.",
+    url: "https://www.stratagemadvisory.com/about-us",
+  },
+};
 
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"), {
   loading: () => <div className="h-96" />,
@@ -71,6 +85,9 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <TeamSection />
+
       {/* What We Do Section */}
       <WhatWeDo />
 
@@ -89,3 +106,4 @@ export default function AboutUs() {
     </>
   );
 }
+
