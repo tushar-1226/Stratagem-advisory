@@ -139,9 +139,12 @@ export default function PlatformSlideshow() {
             href="https://s-advisor.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary rounded-xl shadow-lg hover:bg-primary/90 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary rounded-xl shadow-lg hover:bg-primary/90 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
           >
             Try it now
+            <span className="absolute -top-3 -right-4 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-widest text-primary bg-blue-50 border-2 border-primary rounded-full shadow-sm">
+              Beta
+            </span>
           </a>
         </div>
       </div>
