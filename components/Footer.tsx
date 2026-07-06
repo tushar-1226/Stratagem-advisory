@@ -85,10 +85,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <EnvelopeIcon className="w-5 h-5 text-white/70 shrink-0 mt-0.5" />
                 <a
-                  href="mailto:info@stratagemadvisory.com"
+                  href="mailto:info@strategemadvisoryg.com"
                   className="text-white/70 hover:text-white transition-colors duration-200 text-sm"
                 >
-                  info@stratagemadvisory.com
+                  info@strategemadvisoryg.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

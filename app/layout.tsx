@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MailFloatingButton from "@/components/MailFloatingButton";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,10 +41,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Navbar />
-        {children}
-        <Footer />
-        <MailFloatingButton />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+          <MailFloatingButton />
+        </SmoothScroll>
       </body>
     </html>
   );
