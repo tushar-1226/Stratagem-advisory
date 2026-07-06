@@ -70,7 +70,6 @@ export default function FloatingContactButtons() {
                   <p className="text-xs font-bold text-foreground">
                     Chat on WhatsApp
                   </p>
-                  <p className="text-xs text-foreground/50">+91 8588994645</p>
                 </div>
               </a>
 
@@ -83,9 +82,6 @@ export default function FloatingContactButtons() {
                 <div>
                   <p className="text-xs font-bold text-foreground">
                     Send an Email
-                  </p>
-                  <p className="text-xs text-foreground/50">
-                    info@stratagemadvisory.com
                   </p>
                 </div>
               </a>
@@ -105,23 +101,6 @@ export default function FloatingContactButtons() {
 
       {/* Floating Buttons Stack */}
       <div className="flex flex-col items-center gap-3">
-        {/* WhatsApp button */}
-        <motion.a
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat with us on WhatsApp"
-          className="relative flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#22c55e] hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
-          whileTap={{ scale: 0.93 }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1 }}
-        >
-          <WhatsAppIcon className="w-6 h-6" />
-          {/* Pulse ring */}
-          <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20 pointer-events-none" />
-        </motion.a>
-
         {/* Mail / contact button */}
         <motion.button
           onClick={() => setShowTooltip((prev) => !prev)}
