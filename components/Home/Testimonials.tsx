@@ -58,37 +58,35 @@ export default function Testimonials() {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-12 px-3 mx-2 lg:py-20 lg:px-6 md:mx-4">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center text-foreground">
-          What Our Clients Say
-        </h2>
-        <div className="overflow-hidden">
-          <div className="flex animate-scroll-testimonials w-fit gap-6">
-            {duplicatedTestimonials.map((testimonial, index) => (
-              <div
-                key={`${testimonial.id}-${index}`}
-                className="shrink-0 w-80 lg:w-96"
-              >
-                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 lg:p-8 h-full">
-                  <div className="mb-4">
-                    <ChatBubbleLeftRightIcon className="w-8 h-8 text-primary mb-4" />
-                    <p className="text-foreground/80 text-sm lg:text-base leading-relaxed">
-                      {testimonial.review}
-                    </p>
-                  </div>
-                  <div className="border-t border-gray-200 pt-4">
-                    <p className="font-semibold text-foreground text-base lg:text-lg">
-                      {testimonial.clientName}
-                    </p>
-                    <p className="text-foreground/60 text-sm lg:text-base">
-                      {testimonial.clientPosition}, {testimonial.clientCompany}
-                    </p>
-                  </div>
+    <section className="py-12 lg:py-20">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center text-foreground px-3">
+        What Our Clients Say
+      </h2>
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] overflow-hidden">
+        <div className="flex animate-scroll-testimonials w-fit gap-6 px-6">
+          {duplicatedTestimonials.map((testimonial, index) => (
+            <div
+              key={`${testimonial.id}-${index}`}
+              className="shrink-0 w-80 lg:w-96"
+            >
+              <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 lg:p-8 h-full">
+                <div className="mb-4">
+                  <ChatBubbleLeftRightIcon className="w-8 h-8 text-primary mb-4" />
+                  <p className="text-foreground/80 text-sm lg:text-base leading-relaxed">
+                    {testimonial.review}
+                  </p>
+                </div>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="font-semibold text-foreground text-base lg:text-lg">
+                    {testimonial.clientName}
+                  </p>
+                  <p className="text-foreground/60 text-sm lg:text-base">
+                    {testimonial.clientPosition}, {testimonial.clientCompany}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
